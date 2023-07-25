@@ -3,7 +3,7 @@ import MyButton from "./UI/button/MyButton";
 import { useNavigate } from "react-router-dom";
 
 const PostItem = (props) => {
-	let navigate = useNavigate()
+	const navigate = useNavigate()
 
 	const handleClick = () => {
 		navigate(`/posts/${props.post.id}`, { replace: true });

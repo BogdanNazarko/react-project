@@ -23,7 +23,7 @@ function Posts() {
 
    const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
       const response = await PostService.getAll(limit, page);
-      setPosts(response.data)
+      setPosts(response.data) //загружаем полученные посты в posts
       const totalCount = response.headers['x-total-count']
       setTotalPages(getPageCount(totalCount, limit))
    })
